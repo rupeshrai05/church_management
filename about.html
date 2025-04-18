@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - Grace Community Church</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="/" class="flex-shrink-0 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                            <span class="ml-3 text-xl font-heading font-semibold text-secondary-800">Grace Community</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                        <a href="index.html" class="text-secondary-500 hover:text-primary-600 hover:border-b-2 hover:border-primary-600 px-1 pt-1 font-medium text-sm transition-colors">Home</a>
+                        <a href="about.html" class="text-primary-600 border-b-2 border-primary-600 px-1 pt-1 font-medium text-sm">About</a>
+                        <a href="events.php" class="text-secondary-500 hover:text-primary-600 hover:border-b-2 hover:border-primary-600 px-1 pt-1 font-medium text-sm transition-colors">Events</a>
+                        <a href="donation.php" class="text-secondary-500 hover:text-primary-600 hover:border-b-2 hover:border-primary-600 px-1 pt-1 font-medium text-sm transition-colors">Donate</a>
+                        <a href="contact.html" class="text-secondary-500 hover:text-primary-600 hover:border-b-2 hover:border-primary-600 px-1 pt-1 font-medium text-sm transition-colors">Contact</a>
+                    </div>
+
+                    <!-- Auth Links -->
+                    <div class="flex items-center">
+                        <a href="login.php" class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-primary-700 bg-primary-50 hover:bg-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 mr-3 transition-colors">
+                            Sign in
+                        </a>
+                        <a href="signup.php" class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
+                            Join Us
+                        </a>
+                        
+                        <!-- Mobile menu button -->
+                        <button type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-secondary-400 hover:text-secondary-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-expanded="false" id="mobile-menu-button">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="border-transparent text-secondary-500 hover:bg-gray-50 hover:border-l-4 hover:border-primary-300 hover:text-secondary-700 block pl-3 pr-4 py-2 text-base font-medium">Home</a>
+                    <a href="about.html" class="bg-primary-50 border-l-4 border-primary-500 text-primary-700 block pl-3 pr-4 py-2 text-base font-medium">About</a>
+                    <a href="events.php" class="border-transparent text-secondary-500 hover:bg-gray-50 hover:border-l-4 hover:border-primary-300 hover:text-secondary-700 block pl-3 pr-4 py-2 text-base font-medium">Events</a>
+                    <a href="donation.php" class="border-transparent text-secondary-500 hover:bg-gray-50 hover:border-l-4 hover:border-primary-300 hover:text-secondary-700 block pl-3 pr-4 py-2 text-base font-medium">Donate</a>
+                    <a href="contact.html" class="border-transparent text-secondary-500 hover:bg-gray-50 hover:border-l-4 hover:border-primary-300 hover:text-secondary-700 block pl-3 pr-4 py-2 text-base font-medium">Contact</a>
+                </div>
+                <div class="pt-4 pb-3 border-t border-gray-200">
+                    <div class="flex items-center px-4 space-x-3">
+                        <a href="login.php" class="flex-1 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-primary-700 bg-primary-50 hover:bg-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 text-center">
+                            Sign in
+                        </a>
+                        <a href="signup.php" class="flex-1 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 text-center">
+                            Join Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <div class="relative bg-primary-700">
+                <div class="absolute inset-0">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1501176687610-a3bf7e829c0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Church building">
+                    <div class="absolute inset-0 bg-primary-700 mix-blend-multiply" aria-hidden="true"></div>
+                </div>
+                <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+                    <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl font-heading">About Our Church</h1>
+                    <p class="mt-6 max-w-3xl text-xl text-primary-100">A community of faith, hope, and love serving our neighborhood and beyond.</p>
+                </div>
+            </div>
+
+            <!-- Our Story Section -->
+            <div class="bg-white py-16 sm:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:text-center">
+                        <h2 class="text-base text-primary-600 font-semibold tracking-wide uppercase">Our Story</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-secondary-900 sm:text-4xl font-heading">
+                            A Journey of Faith
+                        </p>
+                        <p class="mt-4 max-w-2xl text-xl text-secondary-500 lg:mx-auto">
+                            Founded in 1985, Grace Community Church has been a beacon of hope and spiritual guidance in our community for over 35 years.
+                        </p>
+                    </div>
+
+                    <div class="mt-16">
+                        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                            <div class="relative">
+                                <img class="w-full h-auto rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Church congregation">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h3 class="text-2xl font-bold text-secondary-900 mb-4 font-heading">Our Humble Beginnings</h3>
+                                <p class="text-secondary-600 mb-4">
+                                    Grace Community Church began as a small gathering of families who shared a vision for a welcoming, inclusive place of worship. What started in a living room with just 12 members has grown into a vibrant community of over 500 faithful individuals.
+                                </p>
+                                <p class="text-secondary-600">
+                                    Through the years, we've remained committed to our founding principles of faith, service, and community. Our growth has allowed us to expand our ministries and outreach programs, touching more lives than we ever thought possible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Mission Section -->
+            <div class="bg-primary-50 py-16 sm:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:text-center mb-12">
+                        <h2 class="text-base text-primary-600 font-semibold tracking-wide uppercase">Our Mission</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-secondary-900 sm:text-4xl font-heading">
+                            Faith, Hope, and Love in Action
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        <!-- Mission Card 1 -->
+                        <div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white mb-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-medium text-secondary-900 mb-2">Spiritual Growth</h3>
+                            <p class="text-secondary-600">
+                                We are committed to nurturing spiritual growth through biblical teaching, prayer, and worship that connects people with God's transformative love.
+                            </p>
+                        </div>
+
+                        <!-- Mission Card 2 -->
+                        <div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white mb-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-medium text-secondary-900 mb-2">Community Outreach</h3>
+                            <p class="text-secondary-600">
+                                We believe in extending God's love beyond our walls through service, charity, and outreach programs that address the needs of our local and global communities.
+                            </p>
+                        </div>
+
+                        <!-- Mission Card 3 -->
+                        <div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white mb-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-medium text-secondary-900 mb-2">Inclusive Fellowship</h3>
+                            <p class="text-secondary-600">
+                                We foster a welcoming environment where people of all backgrounds can find belonging, build meaningful relationships, and grow together in faith.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership Team Section -->
+            <div class="bg-white py-16 sm:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:text-center mb-12">
+                        <h2 class="text-base text-primary-600 font-semibold tracking-wide uppercase">Our Leadership</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-secondary-900 sm:text-4xl font-heading">
+                            Meet Our Team
+                        </p>
+                        <p class="mt-4 max-w-2xl text-xl text-secondary-500 lg:mx-auto">
+                            Dedicated individuals who guide our church with wisdom, compassion, and faith.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- Leader 1 -->
+                        <div class="text-center">
+                            <div class="mx-auto h-40 w-40 rounded-full overflow-hidden mb-4">
+                                <img src="https://stjamescatholic.org/wp-content/uploads/Fr.-Scalia-Headshop1-945x1024.jpg" alt="Pastor John Davis" class="h-full w-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-medium text-secondary-900">Pastor John Davis</h3>
+                            <p class="text-primary-600 mb-3">Senior Pastor</p>
+                            <p class="text-secondary-500 text-sm">
+                                Leading our congregation since 2005, Pastor John brings wisdom, compassion, and inspiring sermons that connect scripture to everyday life.
+                            </p>
+                        </div>
+
+                        <!-- Leader 2 -->
+                        <div class="text-center">
+                            <div class="mx-auto h-40 w-40 rounded-full overflow-hidden mb-4">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Sarah Johnson" class="h-full w-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-medium text-secondary-900">Sarah Johnson</h3>
+                            <p class="text-primary-600 mb-3">Worship Director</p>
+                            <p class="text-secondary-500 text-sm">
+                                With a background in music ministry, Sarah leads our worship team in creating meaningful, spirit-filled worship experiences.
+                            </p>
+                        </div>
+
+                        <!-- Leader 3 -->
+                        <div class="text-center">
+                            <div class="mx-auto h-40 w-40 rounded-full overflow-hidden mb-4">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Michael Thompson" class="h-full w-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-medium text-secondary-900">Michael Thompson</h3>
+                            <p class="text-primary-600 mb-3">Outreach Coordinator</p>
+                            <p class="text-secondary-500 text-sm">
+                                Michael's passion for community service drives our outreach programs, connecting our church with those in need throughout our community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="bg-secondary-900 py-16 sm:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:text-center mb-12">
+                        <h2 class="text-base text-primary-400 font-semibold tracking-wide uppercase">Our Values</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl font-heading">
+                            What We Stand For
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        <!-- Value 1 -->
+                        <div class="bg-secondary-800 rounded-lg p-6 border-l-4 border-primary-500">
+                            <h3 class="text-xl font-medium text-white mb-2">Faith</h3>
+                            <p class="text-secondary-300">
+                                We believe in nurturing a deep, personal relationship with God through Jesus Christ, guided by the Holy Spirit and Scripture.
+                            </p>
+                        </div>
+
+                        <!-- Value 2 -->
+                        <div class="bg-secondary-800 rounded-lg p-6 border-l-4 border-primary-500">
+                            <h3 class="text-xl font-medium text-white mb-2">Community</h3>
+                            <p class="text-secondary-300">
+                                We foster meaningful connections and support systems where everyone feels welcomed, valued, and loved.
+                            </p>
+                        </div>
+
+                        <!-- Value 3 -->
+                        <div class="bg-secondary-800 rounded-lg p-6 border-l-4 border-primary-500">
+                            <h3 class="text-xl font-medium text-white mb-2">Service</h3>
+                            <p class="text-secondary-300">
+                                We are committed to serving others with compassion and generosity, following Christ's example of selfless love.
+                            </p>
+                        </div>
+
+                        <!-- Value 4 -->
+                        <div class="bg-secondary-800 rounded-lg p-6 border-l-4 border-primary-500">
+                            <h3 class="text-xl font-medium text-white mb-2">Growth</h3>
+                            <p class="text-secondary-300">
+                                We encourage continuous spiritual, personal, and communal growth through learning, reflection, and action.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="bg-white">
+                <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+                    <h2 class="text-3xl font-extrabold tracking-tight text-secondary-900 sm:text-4xl font-heading">
+                        <span class="block">Ready to join our community?</span>
+                        <span class="block text-primary-600">We'd love to welcome you.</span>
+                    </h2>
+                    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                        <div class="inline-flex rounded-md shadow">
+                            <a href="events.php" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors">
+                                Upcoming Events
+                            </a>
+                        </div>
+                        <div class="ml-3 inline-flex rounded-md shadow">
+                            <a href="contact.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-primary-50 transition-colors">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-secondary-800 text-white">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Logo and About -->
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                            <span class="ml-3 text-xl font-heading font-semibold text-white">Grace Community</span>
+                        </div>
+                        <p class="mt-4 text-base text-secondary-300">
+                            A welcoming community of faith, hope, and love. Join us as we worship, learn, and serve together.
+                        </p>
+                        <div class="mt-6 flex space-x-6">
+                            <a href="#" class="text-secondary-400 hover:text-primary-400">
+                                <span class="sr-only">Facebook</span>
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-secondary-400 hover:text-primary-400">
+                                <span class="sr-only">Instagram</span>
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-secondary-400 hover:text-primary-400">
+                                <span class="sr-only">Twitter</span>
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-secondary-300 tracking-wider uppercase">Quick Links</h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="about.html" class="text-base text-secondary-300 hover:text-white">About Us</a>
+                            </li>
+                            <li>
+                                <a href="events.php" class="text-base text-secondary-300 hover:text-white">Events</a>
+                            </li>
+                            <li>
+                                <a href="donation.php" class="text-base text-secondary-300 hover:text-white">Donate</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="text-base text-secondary-300 hover:text-white">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-secondary-300 tracking-wider uppercase">Contact Us</h3>
+                        <ul class="mt-4 space-y-4">
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="text-secondary-300">123 Faith Street, Anytown, USA</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span class="text-secondary-300">info@gracecommunity.org</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span class="text-secondary-300">(555) 123-4567</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12 border-t border-secondary-700 pt-8">
+                    <p class="text-base text-secondary-400 text-center">&copy; 2023 Grace Community Church. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
