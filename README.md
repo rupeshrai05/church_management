@@ -79,7 +79,7 @@ This project is licensed under the [MIT License](LICENSE).
 If you have any questions, feel free to reach out:
 
 - **Maintainer**: [Rupesh Rai](https://github.com/rupeshrai05)  
-- **Email**: [your-email@example.com]  
+- **Email**: [rupesh050203@gmail.com]  
 
 ---
 
