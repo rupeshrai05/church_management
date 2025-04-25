@@ -1,5 +1,5 @@
 <?php
-session_start(); // Add this at the very top
+session_start(); 
 include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['is_admin'] = $user['is_admin'];
             
-            // Debugging output
+            
             error_log("Login successful. Redirecting to: " . ($user['is_admin'] ? 'admin' : 'user'));
             
             header("Location: " . ($user['is_admin'] ? 'admin_dashboard.php' : 'user_dashboard.php'));

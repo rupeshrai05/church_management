@@ -166,10 +166,7 @@ $events->data_seek(0);
                 <p class="mt-2 text-lg text-secondary-600">Find out what's happening in our community</p>
             </div>
             <div class="mt-4 md:mt-0">
-                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
-                    <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
-                    Subscribe to Calendar
-                </a>
+                
             </div>
         </div>
 
@@ -186,16 +183,9 @@ $events->data_seek(0);
                 </a>
                 <a href="#" class="inline-flex items-center px-4 py-2 bg-secondary-100 text-secondary-800 rounded-md hover:bg-secondary-200 transition-colors">
                     <i data-lucide="users" class="mr-2 h-4 w-4"></i>
-                    Family Events
+                    Special Events
                 </a>
-                <a href="#" class="inline-flex items-center px-4 py-2 bg-secondary-100 text-secondary-800 rounded-md hover:bg-secondary-200 transition-colors">
-                    <i data-lucide="heart" class="mr-2 h-4 w-4"></i>
-                    Outreach
-                </a>
-                <a href="#" class="inline-flex items-center px-4 py-2 bg-secondary-100 text-secondary-800 rounded-md hover:bg-secondary-200 transition-colors">
-                    <i data-lucide="music" class="mr-2 h-4 w-4"></i>
-                    Worship
-                </a>
+            
             </div>
         </div>
 
@@ -420,22 +410,7 @@ $events->data_seek(0);
                     </div>
                 </div>
 
-                <!-- Newsletter Signup -->
-                <div class="bg-secondary-800 rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-lg font-medium text-white font-heading mb-3">Stay Updated</h3>
-                        <p class="text-secondary-300 mb-4">Subscribe to our newsletter to receive event updates and announcements.</p>
-                        <form class="space-y-4">
-                            <div>
-                                <label for="email" class="sr-only">Email address</label>
-                                <input id="email" name="email" type="email" required class="appearance-none block w-full px-3 py-2 border border-secondary-600 rounded-md shadow-sm placeholder-secondary-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-secondary-700 text-white sm:text-sm" placeholder="Your email address">
-                            </div>
-                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
-                                Subscribe
-                            </button>
-                        </form>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </div>
@@ -496,7 +471,7 @@ $events->data_seek(0);
                     <ul class="mt-4 space-y-4">
                         <li class="flex">
                             <i data-lucide="map-pin" class="h-6 w-6 text-secondary-400 mr-2"></i>
-                            <span class="text-secondary-300">123 Faith Street, Anytown, USA</span>
+                            <span class="text-secondary-300">G.T ROAD , PHAGWARA,LOVELY PROFESSIONAL UNIVERSITY</span>
                         </li>
                         <li class="flex">
                             <i data-lucide="mail" class="h-6 w-6 text-secondary-400 mr-2"></i>

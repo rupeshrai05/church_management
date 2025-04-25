@@ -232,14 +232,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-accent-50 rounded-lg shadow-lg p-6">
-                    <h3 class="text-lg font-medium text-secondary-900 mb-4">Monthly Giving Program</h3>
-                    <p class="text-secondary-600 mb-4">Consider becoming a monthly donor to provide consistent support for our ongoing ministries.</p>
-                    <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent-600 hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 transition-colors">
-                        Learn More
-                        <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-                    </a>
-                </div>
+                
             </div>
             
             <!-- Right Column - Donation Form -->
@@ -464,7 +457,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <ul class="mt-4 space-y-4">
                         <li class="flex">
                             <i data-lucide="map-pin" class="h-6 w-6 text-secondary-400 mr-2"></i>
-                            <span class="text-secondary-300">123 Faith Street, Anytown, USA</span>
+                            <span class="text-secondary-300">G.T ROAD , PHAGWARA,LOVELY PROFESSIONAL UNIVERSITY</span>
                         </li>
                         <li class="flex">
                             <i data-lucide="mail" class="h-6 w-6 text-secondary-400 mr-2"></i>
@@ -472,7 +465,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </li>
                         <li class="flex">
                             <i data-lucide="phone" class="h-6 w-6 text-secondary-400 mr-2"></i>
-                            <span class="text-secondary-300">(555) 123-4567</span>
+                            <span class="text-secondary-300">+ 011-441-444 </span>
                         </li>
                     </ul>
                 </div>

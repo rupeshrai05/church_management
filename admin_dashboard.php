@@ -143,6 +143,10 @@ $total_donations = $conn->query("SELECT SUM(amount) as total FROM donations")->f
                             <i data-lucide="banknote" class="mr-3 h-5 w-5 text-secondary-400 group-hover:text-primary-400"></i>
                             Donations
                         </a>
+                        <a href="admin_users.php" class="flex items-center px-4 py-2 text-sm font-medium rounded-md text-secondary-300 hover:bg-secondary-700 hover:text-white group">
+                            <i data-lucide="user-cog" class="mr-3 h-5 w-5 text-secondary-400 group-hover:text-primary-400"></i>
+                            User Management
+                        </a>
                     </nav>
                 </div>
                 <div class="flex-shrink-0 flex border-t border-secondary-700 p-4">
@@ -227,6 +231,10 @@ $total_donations = $conn->query("SELECT SUM(amount) as total FROM donations")->f
                             <a href="admin_donations.php" class="flex items-center px-4 py-2 text-sm font-medium rounded-md text-secondary-300 hover:bg-secondary-700 hover:text-white group">
                                 <i data-lucide="banknote" class="mr-3 h-5 w-5 text-secondary-400 group-hover:text-primary-400"></i>
                                 Donations
+                            </a>
+                            <a href="admin_users.php" class="flex items-center px-4 py-2 text-sm font-medium rounded-md text-secondary-300 hover:bg-secondary-700 hover:text-white group">
+                                <i data-lucide="user-cog" class="mr-3 h-5 w-5 text-secondary-400 group-hover:text-primary-400"></i>
+                                User Management
                             </a>
                         </nav>
                     </div>
